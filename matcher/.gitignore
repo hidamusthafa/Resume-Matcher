@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+.env
+.vscode/
+Thumbs.db
+desktop.ini
+*.egg-info/
+dist/
+build/
