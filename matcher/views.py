@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from google import genai
+from groq import Groq
 
-client = genai.Client(api_key="AQ.Ab8RN6KKdvb6v_UnTlE70kuxXS7k6a36HXPC_QqTY4u3Ikuttw")
+client = Groq(api_key="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")
 
 def index(request):
     result = None
@@ -28,10 +28,12 @@ def index(request):
         Format your response clearly with headings for each section.
         """
         
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            contents=prompt
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
         )
-        result = response.text
+        result = response.choices[0].message.content
     
     return render(request, 'matcher/index.html', {'result': result})
