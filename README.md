@@ -30,3 +30,19 @@ Built with Python, Django, and Groq AI.
 ## Setup Instructions
 
 1. Clone the repository
+   git clone
+   https://github.com/hidamusthafa/Resume-Matcher.git
+   cd Resume-Matcher
+2. Create a virtual environment
+  python -m venv venv
+  venv\Scripts\activate
+3. Install dependencies
+   pip install -r requirements.txt
+4. Add your Groq API key in `matcher/views.py`
+5. Run the server
+   python manage.py runserver
+6. Open `http://127.0.0.1:8000` in your browser
+
+---
+## Built By
+Fathimathul Hida Musthafa — BTech Computer Science, GCE Kannur
